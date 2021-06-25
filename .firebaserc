@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "waterquality-tfg": {
+      "hosting": {
+        "WaterQualityWeb": [
+          "waterquality-tfg"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "waterquality-tfg"
+  }
+}

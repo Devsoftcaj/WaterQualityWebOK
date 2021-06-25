@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/MarkerCluster.Default.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+
+
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand">WaterQuality Web</a>
+      <form class="d-flex" [formGroup]="filterForm" (ngSubmit)="filtrar()">
+        <span class="navbar-text me-2">Inicio</span>
+        <input formControlName="fromDate" class="form-control me-2" type="date" aria-label="fromDate">
+        <span class="navbar-text me-2">Fin</span>
+        <input formControlName="toDate" class="form-control me-2" type="date" aria-label="toDate">
+        <button class="btn btn-success" type="submit">Filtrar</button>
+      </form>
+    </div>
+  </nav>
+
+<div class="full" id="map">
+ <div class= "leaflet-bottom leaflet-right">
+  <div class="info legend leaflet-control">
+    <h4>Leyenda</h4>
+    <i style="background:#646464"></i> Varias mediciones<br>
+    <i style="background:#7FFF00"></i> Valores normales:<br> 6.5 <= pH <= 9.5 <br> Temp. <= 30ºC<br> Turbidez <= 5<br>
+    <i style="background:#FF0000"></i> Valores anormales:<br> ph < 6.5 <br> ph > 9.5 <br> Temp. > 30ºC <br> Turbidez > 5<br>
+    
+  </div>
+</div>
+
+</div>
+
