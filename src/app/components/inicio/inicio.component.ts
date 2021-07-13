@@ -114,16 +114,16 @@ export class InicioComponent implements OnInit {
           if (item.Turbidez>5 || item.Temperatura>30 || item.pH <6.5 || item.pH>9.5){
             var marker = L.marker([parseFloat(item.Latitud),parseFloat(item.Longitud)], {icon: redIcon}).addTo(map)
                           .bindPopup("<b>Fecha medición:</b> "+item.Fecha.toDate().toLocaleString()
-                          +"<br><b>Temperatura:</b> "+item.Temperatura
-                          +"<br><b>Turbidez:</b> "+item.Turbidez
+                          +"<br><b>Temperatura:</b> "+item.Temperatura + " ºC"
+                          +"<br><b>Turbidez:</b> "+item.Turbidez + " NTU"
                           +"<br><b>pH:</b> "+ item.pH
                           +"<br><b>Comentario:</b> "+ item.Comentario);
 
           } else {
             var marker = L.marker([parseFloat(item.Latitud),parseFloat(item.Longitud)], {icon: greenIcon}).addTo(map)
             .bindPopup("<b>Fecha medición:</b> "+item.Fecha.toDate().toLocaleString()
-            +"<br><b>Temperatura:</b> "+item.Temperatura
-            +"<br><b>Turbidez:</b> "+item.Turbidez
+            +"<br><b>Temperatura:</b> "+item.Temperatura + " ºC"
+            +"<br><b>Turbidez:</b> "+item.Turbidez + " NTU"
             +"<br><b>pH:</b> "+ item.pH
             +"<br><b>Comentario:</b> "+ item.Comentario);
 
